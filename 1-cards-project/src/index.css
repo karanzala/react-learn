@@ -1,0 +1,135 @@
+body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.container{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media(1200px <= width){
+  .container{
+    max-width: 1300px;
+    padding: 0 40px;
+  }
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card{
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+}
+.card .top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card .top img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  padding: 2px;
+}
+.card .top button{
+  background-color: transparent;
+  color: #000;
+  border: 1px solid #000;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+}
+
+.card .center{
+  margin: 20px 0;
+}
+.card .center h3{
+  margin: 0;
+  span{
+    font-size: 12px;
+    color: #888;
+  }
+}
+.card .center h2{
+  margin: 10px 0;
+  line-height: 1.2;
+  font-size: 30px;
+}
+.card .center p{
+  color: #888;
+  font-size: 14px;
+}
+.card .tags{
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.card .tags span{
+  background-color: #eee;
+  color: #555;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.card .bottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  h3{
+    margin: 0;
+    font-size: 20px;
+  }
+  p{
+    margin: 0;
+    color: #888;
+    font-size: 14px;
+  }
+}
+.card .bottom .wrap{
+  display: flex;
+  flex-direction: column;
+}
+.card .bottom button{
+  background-color: #000;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  &:hover{
+    background-color: #333;
+  }
+}
+
+.grid{
+  display: grid;
+  gap: 20px;
+}
