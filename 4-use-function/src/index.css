@@ -22,3 +22,19 @@ button{
     background-color: #0056b3;
   }
 }
+body{
+  margin: 0;
+  padding: 0;
+}
+*{
+  box-sizing: border-box;
+}
+
+.box{
+  width: 100%;
+  height: 100vh;
+  background-color: #007BFF;
+  &:nth-child(2n){
+    background-color: #28a745;
+  }
+}

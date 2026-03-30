@@ -16,6 +16,17 @@ function App() {
     setActive(false);
     document.getElementById("name").value = "";
   }
+
+  function handleScroll(e){
+    console.log(e);
+    if(e>0){
+      console.log("Scroll down");
+    }else{
+      console.log("Scroll up");
+    }
+    
+  }
+
   return (
     <>
       <div>
@@ -30,11 +41,15 @@ function App() {
           id="name"
         />
         {/* <button onClick={getValue} onDoubleClick={handleClick}> */}
-        <button onClick={getValue}>
-          Click me
-        </button>
+        <button onClick={getValue}>Click me</button>
         <button onClick={buttonClear}>Clear</button>
         {active && <p>{data || "No data available"}</p>}
+
+        <div className="wrap" onWheel={(event) => handleScroll(event.deltaY)}>
+          <div className="box"></div>
+          <div className="box"></div>
+          <div className="box"></div>
+        </div>
       </div>
     </>
   );
